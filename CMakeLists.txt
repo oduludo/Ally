@@ -22,6 +22,6 @@ add_library(libboost_filesystem SHARED IMPORTED)
 set_property(TARGET libboost_filesystem PROPERTY IMPORTED_LOCATION /usr/local/opt/boost/lib/libboost_filesystem.dylib)
 
 # Create executable
-set(SOURCE_FILES source/main.cpp)
+set(SOURCE_FILES source/main.cpp include/html.h)
 add_executable(ally ${SOURCE_FILES})
 target_link_libraries(ally libboost_system libboost_filesystem mstch::mstch libmysqlcppconn)
